@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fahad's News App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header class="header">
+  <h1 class="logo">📰 Fahad News</h1>
+  <button class="toggle-btn" id="themeToggle" title="Toggle dark mode">
+    <!-- Sun (with rays) default -->
+    <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" 
+         viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+        d="M12 4V2m0 20v-2
+           m8-8h2M2 12h2
+           m15.364-7.364l1.414-1.414
+           M4.222 19.778l1.414-1.414
+           m0-12.728L4.222 4.222
+           M19.778 19.778l-1.414-1.414
+           M12 6a6 6 0 100 12 6 6 0 000-12z"/>
+    </svg>
+  </button>
+</header>
+
+<section class="filters">
+  <div class="filter-group">
+    <label for="category">Category:</label>
+    <select id="category"></select>
+  </div>
+
+  <div class="filter-group">
+    <label for="language">Language:</label>
+    <select id="language"></select>
+  </div>
+
+  <div class="filter-group">
+    <label for="country">Country:</label>
+    <select id="country"></select>
+  </div>
+
+  <div class="filter-group">
+    <input type="text" id="q" placeholder="Search news..." />
+  </div>
+
+  <button id="apply">Apply</button>
+</section>
+
+<section class="meta">
+  <p id="metaText">Loading...</p>
+</section>
+
+<main class="grid" id="grid">
+  <!-- News articles injected here -->
+</main>
+
+<template id="cardTemplate">
+  <a class="card-link" target="_blank" rel="noopener noreferrer">
+    <div class="card">
+      <div class="thumb-wrap">
+        <img class="thumb" alt="Article image"/>
+      </div>
+      <div class="card-body">
+        <h3 class="title"></h3>
+        <p class="desc"></p>
+        <div class="meta-row">
+          <span class="source"></span>
+          <span class="time"></span>
+        </div>
+      </div>
+    </div>
+  </a>
+</template>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
