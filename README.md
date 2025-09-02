@@ -36,7 +36,7 @@ A dynamic web application that aggregates and displays news headlines from the N
 ```
 .
 ├── app.py
-├── .env.example
+├── .env   # you have to create it after cloning the repo
 ├── static/
 │   ├── app.js
 │   ├── styles.css
@@ -58,13 +58,13 @@ You need a **NewsAPI key** to run this application. You can get one for free fro
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/username/repo-name
+    git clone https://github.com/FAHAD-ALI-github/flask-news-app.git
     ```
 
 2.  **Navigate into the project directory:**
 
     ```bash
-    cd repo-name
+    cd flask-news-app
     ```
 
 3.  **Create a `.env` file:**
@@ -81,7 +81,6 @@ You need a **NewsAPI key** to run this application. You can get one for free fro
     pip install -r requirements.txt
     ```
 
-    *Note: The `requirements.txt` file is not included in the provided code but should contain `Flask`, `requests`, and `python-dotenv`.*
 
 5.  **Run the application:**
 
@@ -95,7 +94,7 @@ The application will be accessible at `http://127.0.0.1:5000`.
 
 ## 🌐 Live Demo
 
-[🔗 Live Site](https://web-production-a818.up.railway.app/)
+[🔗 Live Site](https://fahadali1.pythonanywhere.com/)
 
 -----
 
